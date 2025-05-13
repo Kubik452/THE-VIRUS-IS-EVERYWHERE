@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Архивный Терминал</title>
+  <style>
+    body {
+      background-image: url('screen (2).gif');
+      color: #00ff88;
+      font-family: "Minecraft", monospace;
+      padding: 50px;
+
+    }
+    .terminal {
+      border: 2px solid #0F960F;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #111;
+    }
+    input {
+      background: black;
+      color: #00ff88;
+      border: none;
+      border-bottom: 1px solid #0F960F;
+      font-family: "Minecraft", monospace;
+      width: 100%;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #111;
+      color: #00ff88;
+	  font-family: "Minecraft", monospace;
+      border: 1px solid #0F960F;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0F960F;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <h2>Добро пожаловать, сотрудник!</h2>
+    <p>Введите название файла, к которому хотите получить доступ:</p>
+    <input type="text" id="filenameInput" placeholder=" Введите название файла...">
+    <button onclick="checkInput()">Ввод</button>
+  </div>
+
+  <script>
+    function checkInput() {
+      const input = document.getElementById('filenameInput').value.trim().toLowerCase();
+      if (input === 'эндермен') {
+        window.location.href = "enderman.html";
+      } else {
+        alert("Файл не найден.");
+      }
+    }
+  </script>
+</body>
+</html>
